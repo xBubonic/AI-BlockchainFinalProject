@@ -516,7 +516,7 @@ Game.prototype.init = function() {
 	this.humanFleet = new Fleet(this.humanGrid, CONST.HUMAN_PLAYER);
 	this.computerFleet = new Fleet(this.computerGrid, CONST.COMPUTER_PLAYER);
 
-	this.robot = new AI(this);
+	//this.robot = new AI(this);
 	Game.stats = new Stats();
 	Game.stats.updateStatsSidebar();
 
