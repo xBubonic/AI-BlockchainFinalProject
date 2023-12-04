@@ -10,7 +10,17 @@
 //       (scale a color via max and 0). The toggle only works once the user has
 //       finished placing their ships, or she can cheat easily by placing her ships
 //       outside the regions with the highest probability.
+const token = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+const server = 'https://xbubonic.github.io/';
+const port = 8080;
+const client = new algosdk.Algodv2(token, server, port);
 
+(async () => {
+  console.log(await client.status().do());
+})().catch((e) => {
+  console.log(e);
+});
+	
 console.log("%cHi! Thanks for checking out this game.%c Please be nice and don't " +
 	"hack the Stats object, I'm using Google Analytics to collect info about " +
 	"the AI's win/loss percentage in order to improve the bot, so if you do " +
